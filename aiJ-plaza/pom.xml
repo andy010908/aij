@@ -86,7 +86,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <tasks>
+                    <target>
                         <delete dir="./dist/" verbose="true"/>
                         <copy todir="./dist/" overwrite="true">
                             <fileset file="${basedir}/src/aijServer*.sh"/>
@@ -97,7 +97,7 @@
                             <fileset file="${basedir}/target/${project.build.finalName}.jar"/>
                         </copy>
                         <chmod file="./dist/aijServer*.sh" perm="777"/>
-                    </tasks>
+                    </target>
                 </configuration>
             </plugin>
         </plugins>
